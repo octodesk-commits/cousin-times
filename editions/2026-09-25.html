@@ -8,10 +8,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 
   * { box-sizing: border-box; }
-  html {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   html, body { margin: 0; padding: 0; }
   body {
     background: #e9e4d8;
@@ -124,28 +121,7 @@
   }
   figcaption b { font-style: normal; letter-spacing: .1em; text-transform: uppercase; font-size: 10px; }
 
-  .story {
-    columns: 2;
-    column-gap: 26px;
-    column-rule: 1px solid #ddd5c2;
-    font-size: 15.5px;
-    line-height: 1.62;
-    text-align: justify;
-    hyphens: auto;
-  }
-  .story p { margin: 0 0 12px; }
-  .story p:first-of-type::first-letter {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 900;
-    float: left;
-    font-size: 58px;
-    line-height: .82;
-    padding: 6px 8px 0 0;
-  }
-  .dateline-run { font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
-
   .jump {
-    column-span: all;
     margin-top: 2px;
     border-top: 1px solid #b9b09c;
     border-bottom: 1px solid #b9b09c;
@@ -197,7 +173,7 @@
   .citydesk li::before { content: "•"; padding-right: 8px; color: #7a2e1d; }
   .citydesk .flag { color: #7a2e1d; font-weight: 600; }
 
-  /* ---------- letters ---------- */
+  /* ---------- postbag (compact) ---------- */
   .letters { margin-top: 20px; }
   .letters .sub {
     font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
@@ -206,23 +182,24 @@
   .letters-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 26px;
+    gap: 18px 26px;
   }
-  .letter { border-top: 1px solid #191713; padding-top: 10px; }
-  .letter .stars { font-size: 13px; letter-spacing: .3em; color: #7a2e1d; margin-bottom: 8px; }
-  .letter h3 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 800; font-size: 17px; line-height: 1.2;
-    margin: 0 0 8px;
-  }
+  .letter { border-top: 1px solid #191713; padding-top: 8px; }
+  .letter .stars { font-size: 12px; letter-spacing: .3em; color: #7a2e1d; margin-bottom: 5px; }
   .letter p {
-    font-size: 13.5px; line-height: 1.6; font-style: italic;
-    color: #37332a; margin: 0 0 8px; text-align: justify; hyphens: auto;
+    font-size: 13px; line-height: 1.45; font-style: italic;
+    color: #37332a; margin: 0 0 6px;
   }
   .letter .sig {
-    font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+    font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase;
     color: #4a453b; font-style: normal;
   }
+  .letters .gmb-cta {
+    margin: 18px 0 0; text-align: center;
+    font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: #4a453b;
+  }
+  .letters .gmb-cta a { color: #7a2e1d; text-decoration: underline; }
 
   /* ---------- colophon ---------- */
   .colophon {
@@ -244,31 +221,21 @@
   @media (max-width: 640px) {
     body { padding: 12px 8px 40px; }
     .page { padding: 14px 14px 18px; }
-
     .topline { flex-wrap: wrap; gap: 2px 12px; font-size: 9.5px; }
     .masthead { margin: 10px 0 2px; }
     .tagline { font-size: 10px; letter-spacing: .18em; margin-bottom: 10px; }
-
     .ears { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 10px 2px; text-align: center; }
     .ears .dateline { order: -1; }
     .ears .ear:last-child { text-align: center; }
     .ears .ear br { display: none; }
-
     .sheet { margin-top: 14px; }
     .kicker { font-size: 10px; }
     .standfirst { font-size: 15px; }
     .byline { margin-bottom: 12px; }
-
-    .story { columns: 1; font-size: 15px; line-height: 1.6; text-align: left; }
-    .story p:first-of-type::first-letter { font-size: 48px; }
-
-    .letters-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
-    .letter p { text-align: left; }
-
+    .letters-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
     table.market { font-size: 12.5px; }
     .citydesk ul { font-size: 13.5px; }
     .citydesk li { text-align: left; }
-
     .colophon { flex-direction: column; gap: 5px; text-align: center; }
   }
 </style>
@@ -296,7 +263,7 @@
     <div class="ear">
       <b>Inside Today's Edition</b>
       Slea Head Drive — Travel Desk lead<br>
-      The Markets — My Irish Cousin, right rail · Postbag — Google reviews
+      The Markets — My Irish Cousin, right rail · Postbag — six new reviews
     </div>
   </div>
 
@@ -314,39 +281,46 @@
         <figcaption><b>Photograph: The Cousin Times</b> — A dramatic coastal road winding along steep green cliffs above the Atlantic Ocean on the Dingle Peninsula. Beyond Slea Head, the Blasket Islands sit low in the water like dark stones.</figcaption>
       </figure>
 
-      <div class="story">
-        <p><span class="dateline-run">Dingle Peninsula —</span> The full Slea Head loop is only about fifty kilometres, our correspondent writes, but it packs in enough scenery for a whole day — and enough visitors to turn those kilometres into a slow procession if you get the timing wrong. Dingle town is the launch pad: the last place to fill the tank, buy a sandwich and use a proper toilet for the next few hours. Do not skip this step.</p>
-        <p>Direction matters. Most people, and almost every coach, go clockwise from Dingle town — Ventry first, then Slea Head, then Coumeenoole. Leave Dingle before eight in the morning and you can have the viewpoints to yourself for an hour or two; by ten the coaches arrive, and by eleven the car parks at Coumeenoole are full. If you only remember one thing from the guide, make it that.</p>
-        <p>As for the stops: Slea Head viewpoint is essential, looking west over the Blasket Islands — the picture everyone expects from this drive. Coumeenoole Beach, below the road and fresh from a starring role in Ryan's Daughter, is the beach everyone photographs. Dunmore Head is the westernmost point of mainland Ireland, and the beehive huts and Famine Cottage reward the historically minded — while Gallarus Oratory, on the north side, deserves its own visit rather than a rushed five minutes.</p>
-        <p>The narrow bits are simple if you keep your speed down: use the passing places, reverse when you are nearer one, and never wave the sheep out of the way aggressively — they live here and you do not. Rain is no reason to cancel; fog is. Time the second half of the loop for the hour before sunset, when the light comes in low from the west, and you will understand why painters keep coming back.</p>
-        <div class="jump">📖 Continued in full: <a href="https://www.myirishcousin.com/blog/slea-head-drive-by-car">Slea Head Drive by Car — The Best Dingle Peninsula Coastal Loop</a></div>
-      </div>
+      <div class="jump">📖 Read the full guide on the website: <a href="https://www.myirishcousin.com/blog/slea-head-drive-by-car">Slea Head Drive by Car — The Best Dingle Peninsula Coastal Loop</a></div>
 
-      <!-- ---------- LETTERS ---------- -->
+      <!-- ---------- POSTBAG ---------- -->
       <section class="letters">
         <h2>The Postbag</h2>
         <hr class="section-rule">
-        <p class="sub">Our Cousins Write — Latest Google Reviews for My Irish Cousin · 1,780 reviews, average ★5.0 · Sentiment: unanimously glowing — praise for smooth pickup and drop-off, all-inclusive cover with no upsells, and staff who answer every question</p>
+        <p class="sub">Six new reviews overnight — every one ★★★★★ · Sentiment: glowing — smooth pickup and drop-off, everything included with no upsells, and staff who answer every question · Excerpts</p>
         <div class="letters-grid">
           <div class="letter">
             <div class="stars">★★★★★</div>
-            <h3>Could Not Have Been Smoother</h3>
-            <p>"Working with them could not have been easier or smoother! Both pick up and drop off went so much better than ever expected. The car was good and the service was exceptional!"</p>
+            <p>"Could not have been easier or smoother — pickup and drop-off better than ever expected."</p>
             <div class="sig">— Bridget Hood, on Google</div>
           </div>
           <div class="letter">
             <div class="stars">★★★★★</div>
-            <h3>Stress-Free and Stellar</h3>
-            <p>"A stress-free stellar experience! I will definitely be using My Irish Cousin again."</p>
+            <p>"A stress-free, stellar experience — will definitely use My Irish Cousin again."</p>
             <div class="sig">— Lenaye Marsten, on Google</div>
           </div>
           <div class="letter">
             <div class="stars">★★★★★</div>
-            <h3>Jamie at Shannon, a Star</h3>
-            <p>"Pickup and drop off were very easy and quick. With everything included, there was no need for us to check the car for damage either before taking it, or when dropping it off. Jamie at the Shannon Airport location is a fabulous employee and answered all our questions."</p>
+            <p>"Everything covered in the cost, GPS a godsend — recommended without hesitation."</p>
+            <div class="sig">— Tracy Dall, on Google</div>
+          </div>
+          <div class="letter">
+            <div class="stars">★★★★★</div>
+            <p>"Simple in and out, no upsells — everything included, like they said."</p>
+            <div class="sig">— Shelly, on Google</div>
+          </div>
+          <div class="letter">
+            <div class="stars">★★★★★</div>
+            <p>"Easy to communicate with, very flexible, fantastic support from booking to drop-off."</p>
+            <div class="sig">— Sharryn Cunningham, on Google</div>
+          </div>
+          <div class="letter">
+            <div class="stars">★★★★★</div>
+            <p>"Pickup and drop-off easy and quick — Jamie at Shannon a fabulous employee."</p>
             <div class="sig">— Esther Siewert, on Google</div>
           </div>
         </div>
+        <p class="gmb-cta"><a href="https://maps.google.com/maps?cid=15064788590415502625">Read all reviews on our Google page</a></p>
       </section>
     </main>
 
