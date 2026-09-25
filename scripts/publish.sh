@@ -7,7 +7,7 @@ REPO="/home/adrian/cousin-times"
 python3 "$REPO/scripts/build_site.py" "$DATE"
 cd "$REPO"
 
-git add index.html archive.html sitemap.xml editions CNAME robots.txt .nojekyll scripts
+git add -A .
 if git diff --cached --quiet; then
   echo "No site changes for $DATE"
   exit 0

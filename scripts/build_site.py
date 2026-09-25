@@ -6,13 +6,13 @@ Public output:
 - index.html              latest edition, served at the domain root
 - editions/YYYY-MM-DD.html permanent dated copy
 - archive.html            linked archive of all dated editions
-- sitemap.xml             root + dated editions
+
+Privacy: robots.txt disallows all crawlers and every HTML page is forced to carry a noindex/nofollow/noarchive robots meta tag. No sitemap is generated.
 """
 from __future__ import annotations
 
 import html
 import re
-import shutil
 import sys
 import urllib.request
 from datetime import datetime
@@ -22,7 +22,7 @@ from zoneinfo import ZoneInfo
 ROOT = Path("/home/adrian/cousin-times")
 SRC_DIR = Path("/home/adrian/clawd/newspaper")
 EDITIONS = ROOT / "editions"
-BASE_URL = "https://cousintimes.shamrock.click"
+NOINDEX_META = '<meta name="robots" content="noindex, nofollow, noarchive">'
 FORBIDDEN = (
     "Irish Getaways",
     "Trails and Tales",
@@ -38,6 +38,20 @@ def dublin_today() -> str:
 
 def clean_url(url: str) -> str:
     return url.rstrip(".,;:!?)]}")
+
+
+def ensure_noindex(text: str) -> str:
+    if 'name="robots"' in text:
+        return re.sub(
+            r'<meta name="robots" content="[^"]*">',
+            NOINDEX_META,
+            text,
+            count=1,
+        )
+    viewport = '<meta name="viewport" content="width=device-width, initial-scale=1">'
+    if viewport in text:
+        return text.replace(viewport, viewport + "\n" + NOINDEX_META, 1)
+    raise SystemExit("Refusing to publish: viewport meta tag not found for noindex insertion")
 
 
 def validate_edition(text: str) -> None:
@@ -79,6 +93,7 @@ def build_archive(entries: list[tuple[str, str]]) -> None:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
 <title>The Cousin Times — Archive</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Playfair+Display:ital,wght@0,700;0,900&family=Lora:ital,wght@0,400;0,600&display=swap');
@@ -113,18 +128,6 @@ def build_archive(entries: list[tuple[str, str]]) -> None:
     (ROOT / "archive.html").write_text(page, encoding="utf-8")
 
 
-def build_sitemap(entries: list[tuple[str, str]]) -> None:
-    urls = [f"""  <url><loc>{BASE_URL}/</loc><lastmod>{entries[0][0] if entries else dublin_today()}</lastmod></url>"""]
-    urls.extend(
-        f"  <url><loc>{BASE_URL}/editions/{date}.html</loc><lastmod>{date}</lastmod></url>"
-        for date, _ in entries
-    )
-    sitemap = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" + \
-        "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n" + \
-        "\n".join(urls) + "\n</urlset>\n"
-    (ROOT / "sitemap.xml").write_text(sitemap, encoding="utf-8")
-
-
 def main() -> None:
     date = sys.argv[1] if len(sys.argv) > 1 else dublin_today()
     src = SRC_DIR / f"mic-times-{date}.html"
@@ -132,18 +135,17 @@ def main() -> None:
         raise SystemExit(f"Missing source edition: {src}")
 
     EDITIONS.mkdir(parents=True, exist_ok=True)
-    text = src.read_text(encoding="utf-8")
+    text = ensure_noindex(src.read_text(encoding="utf-8"))
     validate_edition(text)
 
     dated = EDITIONS / f"{date}.html"
-    shutil.copyfile(src, dated)
-    shutil.copyfile(src, ROOT / "index.html")
+    dated.write_text(text, encoding="utf-8")
+    (ROOT / "index.html").write_text(text, encoding="utf-8")
 
     entries = []
     for path in sorted(EDITIONS.glob("????-??-??.html"), reverse=True):
         entries.append((path.stem, edition_title(path)))
     build_archive(entries)
-    build_sitemap(entries)
     print(f"Built Cousin Times site for {date}: {len(entries)} edition(s) archived")
 
 

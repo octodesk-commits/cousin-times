@@ -7,3 +7,5 @@ Static daily newspaper site for `https://cousintimes.shamrock.click`.
 - Output: root `index.html` is the latest edition; dated copies live in `editions/`; archive is `archive.html`.
 
 DNS: `cousintimes.shamrock.click` should be a CNAME to `octodesk-commits.github.io`.
+
+Privacy: this site is intentionally not indexed. `robots.txt` disallows all crawlers, every HTML page carries `noindex, nofollow, noarchive`, and no sitemap is generated.
