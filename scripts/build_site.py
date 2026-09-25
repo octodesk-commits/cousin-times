@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
-"""Build the public Cousin Times static site from the daily newspaper HTML.
+"""Build the Cousin Times static site from the daily newspaper HTML.
 
 Source editions live in ~/clawd/newspaper/mic-times-YYYY-MM-DD.html.
 Public output:
-- index.html              latest edition, served at the domain root
-- editions/YYYY-MM-DD.html permanent dated copy
-- archive.html            linked archive of all dated editions
+- index.html                         404-style placeholder at the domain root (no links)
+- ct-6f30fc5c/index.html             latest edition at the private path
+- ct-6f30fc5c/editions/YYYY-MM-DD.html permanent dated copy
+- ct-6f30fc5c/archive.html           linked archive of all dated editions
 
-Privacy: robots.txt disallows all crawlers and every HTML page is forced to carry a noindex/nofollow/noarchive robots meta tag. No sitemap is generated.
+Privacy: robots.txt disallows all crawlers, no sitemap is generated, every HTML page is forced to carry a noindex/nofollow/noarchive robots meta tag, and the paper lives behind an unguessable path. This is obscurity, not access control.
 """
 from __future__ import annotations
 
 import html
 import re
+import shutil
 import sys
 import urllib.request
 from datetime import datetime
@@ -21,7 +23,9 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path("/home/adrian/cousin-times")
 SRC_DIR = Path("/home/adrian/clawd/newspaper")
-EDITIONS = ROOT / "editions"
+PRIVATE_PREFIX = "ct-6f30fc5c"
+PRIVATE_DIR = ROOT / PRIVATE_PREFIX
+EDITIONS = PRIVATE_DIR / "editions"
 NOINDEX_META = '<meta name="robots" content="noindex, nofollow, noarchive">'
 FORBIDDEN = (
     "Irish Getaways",
@@ -83,6 +87,33 @@ def edition_title(path: Path) -> str:
     return f"The Cousin Times — {path.stem}"
 
 
+def write_placeholder() -> None:
+    page = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{NOINDEX_META}
+<title>404 — Not Found</title>
+<style>
+  * {{ box-sizing: border-box; }}
+  body {{ margin: 0; min-height: 100vh; display: grid; place-items: center; background: #f4f4f4; color: #333; font-family: Georgia, serif; }}
+  main {{ text-align: center; padding: 40px 24px; }}
+  h1 {{ font-size: clamp(42px, 10vw, 84px); margin: 0 0 8px; }}
+  p {{ margin: 0; color: #666; }}
+</style>
+</head>
+<body>
+<main>
+  <h1>404</h1>
+  <p>Nothing to see here.</p>
+</main>
+</body>
+</html>
+"""
+    (ROOT / "index.html").write_text(page, encoding="utf-8")
+
+
 def build_archive(entries: list[tuple[str, str]]) -> None:
     items = "\n".join(
         f'    <li><a href="editions/{date}.html"><span>{date}</span><strong>{html.escape(title)}</strong></a></li>'
@@ -93,7 +124,7 @@ def build_archive(entries: list[tuple[str, str]]) -> None:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow, noarchive">
+{NOINDEX_META}
 <title>The Cousin Times — Archive</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Playfair+Display:ital,wght@0,700;0,900&family=Lora:ital,wght@0,400;0,600&display=swap');
@@ -117,7 +148,7 @@ def build_archive(entries: list[tuple[str, str]]) -> None:
   <h1>The Cousin Times</h1>
   <p class="sub">Daily Edition Archive</p>
   <hr>
-  <p class="latest"><a href="/">Read the latest edition</a></p>
+  <p class="latest"><a href="./">Read the latest edition</a></p>
   <ul>
 {items}
   </ul>
@@ -125,7 +156,16 @@ def build_archive(entries: list[tuple[str, str]]) -> None:
 </body>
 </html>
 """
-    (ROOT / "archive.html").write_text(page, encoding="utf-8")
+    (PRIVATE_DIR / "archive.html").write_text(page, encoding="utf-8")
+
+
+def remove_stale_public_paths() -> None:
+    stale_archive = ROOT / "archive.html"
+    if stale_archive.exists():
+        stale_archive.unlink()
+    stale_editions = ROOT / "editions"
+    if stale_editions.exists():
+        shutil.rmtree(stale_editions)
 
 
 def main() -> None:
@@ -140,13 +180,15 @@ def main() -> None:
 
     dated = EDITIONS / f"{date}.html"
     dated.write_text(text, encoding="utf-8")
-    (ROOT / "index.html").write_text(text, encoding="utf-8")
+    (PRIVATE_DIR / "index.html").write_text(text, encoding="utf-8")
 
     entries = []
     for path in sorted(EDITIONS.glob("????-??-??.html"), reverse=True):
         entries.append((path.stem, edition_title(path)))
     build_archive(entries)
-    print(f"Built Cousin Times site for {date}: {len(entries)} edition(s) archived")
+    remove_stale_public_paths()
+    write_placeholder()
+    print(f"Built Cousin Times site for {date}: {len(entries)} edition(s) archived at /{PRIVATE_PREFIX}/")
 
 
 if __name__ == "__main__":
