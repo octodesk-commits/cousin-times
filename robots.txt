@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cousintimes.shamrock.click/sitemap.xml
