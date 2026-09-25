@@ -14,5 +14,9 @@ if git diff --cached --quiet; then
 fi
 
 git commit -m "Publish The Cousin Times $DATE"
+# GitHub Pages custom-domain remove/re-add can create CNAME commits on origin;
+# rebase before pushing so the daily job does not die on a non-fast-forward.
+git fetch origin
+git rebase origin/main
 git push origin main
 echo "Published The Cousin Times $DATE"
