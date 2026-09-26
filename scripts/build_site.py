@@ -34,6 +34,33 @@ FORBIDDEN = (
     "IMAGE_PLACEHOLDER",
 )
 URL_RE = re.compile(r"https?://[^\s\"'<>]+")
+BLOG_SLUG_RE = re.compile(r"https://www\.myirishcousin\.com/blog/([a-z0-9-]+)")
+
+
+def travel_desk_slug(text: str) -> str | None:
+    match = BLOG_SLUG_RE.search(text)
+    return match.group(1) if match else None
+
+
+def guard_fresh_travel_desk(text: str, date: str) -> None:
+    current = travel_desk_slug(text)
+    if not current:
+        raise SystemExit("Refusing to publish: Travel Desk My Irish Cousin blog link not found")
+
+    previous: list[tuple[str, str]] = []
+    for path in SRC_DIR.glob("mic-times-*.html"):
+        previous_date = path.stem.removeprefix("mic-times-")
+        if previous_date >= date:
+            continue
+        previous_slug = travel_desk_slug(path.read_text(encoding="utf-8"))
+        if previous_slug:
+            previous.append((previous_date, previous_slug))
+    if previous:
+        previous_date, previous_slug = max(previous)
+        if previous_slug == current:
+            raise SystemExit(
+                f"Refusing to publish: Travel Desk repeats {previous_date} article slug '{current}'"
+            )
 
 
 def dublin_today() -> str:
@@ -177,6 +204,7 @@ def main() -> None:
     EDITIONS.mkdir(parents=True, exist_ok=True)
     text = ensure_noindex(src.read_text(encoding="utf-8"))
     validate_edition(text)
+    guard_fresh_travel_desk(text, date)
 
     dated = EDITIONS / f"{date}.html"
     dated.write_text(text, encoding="utf-8")
