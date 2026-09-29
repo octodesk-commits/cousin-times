@@ -42,6 +42,23 @@ def travel_desk_slug(text: str) -> str | None:
     return match.group(1) if match else None
 
 
+def guard_edition_date(text: str, date: str) -> None:
+    """Hard-refuse to publish an edition whose dateline is not the target date.
+
+    A resumed room session can carry yesterday's date anchor and re-edit the
+    previous edition; without this the wrong paper ships under a new filename.
+    """
+    from datetime import date as _date
+
+    y, m, d = (int(part) for part in date.split("-"))
+    expected = _date(y, m, d).strftime("%A, %-d %B %Y")
+    if expected not in text:
+        raise SystemExit(
+            f"Refusing to publish: edition dateline is not '{expected}' — "
+            "the source file is stale or for the wrong date"
+        )
+
+
 def guard_fresh_travel_desk(text: str, date: str) -> None:
     current = travel_desk_slug(text)
     if not current:
@@ -204,6 +221,7 @@ def main() -> None:
     EDITIONS.mkdir(parents=True, exist_ok=True)
     text = ensure_noindex(src.read_text(encoding="utf-8"))
     validate_edition(text)
+    guard_edition_date(text, date)
     guard_fresh_travel_desk(text, date)
 
     dated = EDITIONS / f"{date}.html"
