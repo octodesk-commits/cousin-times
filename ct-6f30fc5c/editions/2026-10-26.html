@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>The Cousin Times — Monday, 26 October 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #e9e4d8;
+    padding: 28px 20px 60px;
+    color: #191713;
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  }
+
+  .page {
+    width: 1120px;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #fbf8f1;
+    border: 1px solid #cfc7b4;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12), 0 18px 50px rgba(0,0,0,.18);
+    padding: 26px 34px 30px;
+  }
+
+  /* ---------- top strip ---------- */
+  .topline {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    color: #4a453b; padding-bottom: 6px;
+  }
+  .rule-double { border-top: 1px solid #191713; border-bottom: 3px double #191713; height: 4px; }
+  .rule-single { border: 0; border-top: 1px solid #191713; margin: 0; }
+
+  /* ---------- masthead ---------- */
+  .masthead {
+    font-family: 'Pirata One', 'Old English Text MT', 'UnifrakturCook', serif;
+    font-weight: 400;
+    font-size: clamp(38px, 11vw, 84px);
+    line-height: 1;
+    text-align: center;
+    margin: 14px 0 4px;
+    letter-spacing: .01em;
+  }
+  .tagline {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: #4a453b;
+    margin-bottom: 12px;
+  }
+  .ears {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 18px;
+    align-items: center;
+    border-top: 1px solid #191713;
+    border-bottom: 1px solid #191713;
+    padding: 7px 2px;
+    margin-top: 4px;
+    font-size: 11.5px;
+    line-height: 1.45;
+  }
+  .ears .ear { color: #37332a; }
+  .ears .ear b { display: block; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: #191713; margin-bottom: 2px; }
+  .ears .dateline { text-align: center; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; }
+  .ears .ear:last-child { text-align: right; }
+
+  /* ---------- layout ---------- */
+  .sheet {
+    display: grid;
+    grid-template-columns: minmax(0, 690px) minmax(0, 1fr);
+    gap: 0;
+    margin-top: 18px;
+  }
+  .well { padding-right: 26px; min-width: 0; }
+  .rail { border-left: 1px solid #b9b09c; padding-left: 26px; min-width: 0; }
+
+  .kicker {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: .26em; text-transform: uppercase;
+    color: #7a2e1d;
+    margin: 0 0 8px;
+  }
+  .headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(27px, 4.5vw, 42px);
+    line-height: 1.08;
+    margin: 0 0 6px;
+    letter-spacing: -.01em;
+  }
+  .standfirst {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.4;
+    color: #37332a;
+    margin: 0 0 12px;
+  }
+  .byline {
+    font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: #4a453b; margin: 0 0 14px;
+  }
+  .byline b { color: #191713; }
+
+  figure { margin: 0 0 14px; }
+  figure img {
+    width: 100%; height: auto; display: block;
+    border: 1px solid #b9b09c;
+    filter: saturate(.92) contrast(1.02);
+  }
+  figcaption {
+    font-size: 11.5px; color: #4a453b; font-style: italic;
+    padding: 6px 2px 0; line-height: 1.4;
+  }
+  figcaption b { font-style: normal; letter-spacing: .1em; text-transform: uppercase; font-size: 10px; }
+
+  .jump {
+    margin-top: 2px;
+    border-top: 1px solid #b9b09c;
+    border-bottom: 1px solid #b9b09c;
+    padding: 8px 2px;
+    font-size: 12.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  .jump a { color: #7a2e1d; text-decoration: none; font-weight: 600; overflow-wrap: anywhere; }
+  .jump a:hover { text-decoration: underline; }
+
+  /* ---------- rail boxes ---------- */
+  .rail section { margin-bottom: 26px; }
+  .rail h2, .letters h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 800;
+    font-size: 21px;
+    margin: 0 0 2px;
+  }
+  .section-rule { border: 0; border-top: 3px double #191713; margin: 0 0 12px; }
+  .rail .sub {
+    font-size: 10.5px; letter-spacing: .2em; text-transform: uppercase;
+    color: #4a453b; margin: 0 0 12px;
+  }
+
+  table.market { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  table.market caption {
+    text-align: left; font-size: 11px; letter-spacing: .16em;
+    text-transform: uppercase; color: #4a453b; padding-bottom: 6px;
+  }
+  table.market th, table.market td { padding: 5px 2px; }
+  table.market thead th {
+    border-top: 1px solid #191713; border-bottom: 1px solid #191713;
+    font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase;
+    text-align: right; font-weight: 600;
+  }
+  table.market thead th:first-child { text-align: left; }
+  table.market td { border-bottom: 1px solid #ddd5c2; }
+  table.market td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  table.market tfoot td {
+    border-bottom: 0; border-top: 1px solid #191713;
+    font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #4a453b;
+    padding-top: 7px;
+  }
+  .market-note { font-size: 12.5px; font-style: italic; color: #37332a; line-height: 1.5; margin: 12px 0 0; }
+
+  .citydesk ul { margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.55; }
+  .citydesk li { margin-bottom: 9px; padding-left: 14px; text-indent: -14px; text-align: justify; }
+  .citydesk li::before { content: "•"; padding-right: 8px; color: #7a2e1d; }
+  .citydesk .flag { color: #7a2e1d; font-weight: 600; }
+
+  /* ---------- postbag (compact) ---------- */
+  .letters { margin-top: 20px; }
+  .letters .sub {
+    font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+    color: #4a453b; margin: 0 0 14px;
+  }
+  .letters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px 26px;
+  }
+  .letter { border-top: 1px solid #191713; padding-top: 8px; }
+  .letter .stars { font-size: 12px; letter-spacing: .3em; color: #7a2e1d; margin-bottom: 5px; }
+  .letter p {
+    font-size: 13px; line-height: 1.45; font-style: italic;
+    color: #37332a; margin: 0 0 6px;
+  }
+  .letter .sig {
+    font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase;
+    color: #4a453b; font-style: normal;
+  }
+  .letters .gmb-cta {
+    margin: 18px 0 0; text-align: center;
+    font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: #4a453b;
+  }
+  .letters .gmb-cta a { color: #7a2e1d; text-decoration: underline; }
+
+  /* ---------- colophon ---------- */
+  .colophon {
+    margin-top: 26px;
+    border-top: 1px solid #191713;
+    padding-top: 8px;
+    display: flex; justify-content: space-between;
+    font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase;
+    color: #4a453b; line-height: 1.6;
+  }
+
+  @media (max-width: 1180px) {
+    .page { width: 100%; }
+    .sheet { grid-template-columns: minmax(0, 1fr); }
+    .well { padding-right: 0; }
+    .rail { border-left: 0; padding-left: 0; border-top: 3px double #191713; margin-top: 24px; padding-top: 18px; }
+  }
+
+  @media (max-width: 640px) {
+    body { padding: 12px 8px 40px; }
+    .page { padding: 14px 14px 18px; }
+    .topline { flex-wrap: wrap; gap: 2px 12px; font-size: 9.5px; }
+    .masthead { margin: 10px 0 2px; }
+    .tagline { font-size: 10px; letter-spacing: .18em; margin-bottom: 10px; }
+    .ears { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 10px 2px; text-align: center; }
+    .ears .dateline { order: -1; }
+    .ears .ear:last-child { text-align: center; }
+    .ears .ear br { display: none; }
+    .sheet { margin-top: 14px; }
+    .kicker { font-size: 10px; }
+    .standfirst { font-size: 15px; }
+    .byline { margin-bottom: 12px; }
+    .letters-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+    table.market { font-size: 12.5px; }
+    .citydesk ul { font-size: 13.5px; }
+    .citydesk li { text-align: left; }
+    .colophon { flex-direction: column; gap: 5px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="topline">
+    <span>Vol. I — No. 32</span>
+    <span>Registered at the G.P.O. as a newspaper</span>
+    <span>Price: one cuppa</span>
+  </div>
+  <div class="rule-double"></div>
+
+  <h1 class="masthead">The Cousin Times</h1>
+  <div class="tagline">Ireland's Trade &amp; Travel Chronicle · Est. Mornings Ago</div>
+
+  <div class="ears">
+    <div class="ear">
+      <b>The Weather</b>
+      A bright Monday — crisp and dry,<br>
+      light winds off the Atlantic.
+    </div>
+    <div class="dateline">Dublin, Monday, 26 October 2026</div>
+    <div class="ear">
+      <b>Inside Today's Edition</b>
+      Leenane &amp; Killary Harbour — Travel Desk lead<br>
+      The Markets — My Irish Cousin, right rail · Postbag — a quiet desk
+    </div>
+  </div>
+
+  <div class="sheet">
+
+    <!-- ================= MAIN WELL ================= -->
+    <main class="well">
+      <p class="kicker">From the Travel Desk — My Irish Cousin</p>
+      <h2 class="headline">Leenane and Killary Harbour by Car: Ireland's Only Fjord</h2>
+      <p class="standfirst">There is a stretch of the N59 just west of Leenane where the road stops being a road and becomes a shelf. On your right the mountain goes up; on your left it goes down, hard, into water the wrong colour for Ireland — black-green, deep, still. No beach, no shallow end: the land simply stops, and sixteen kilometres of drowned valley begins. Killary is the one place in the west where the mountains do not politely step back from the sea — they stand in it, and most visitors meet the whole thing at forty miles an hour.</p>
+      <p class="byline">By <b>Shruti</b>, Travel Correspondent</p>
+
+      <figure>
+        <img src="https://cdn.sanity.io/images/m1v89hf3/production/a56d6d5143b9ba265986c69b5b97402359922655-2048x1152.jpg" alt="Killary Harbour in County Galway, Ireland's only fjord, a long dark inlet running between steep mountain walls with lines of black mussel buoys on the still water and low cloud over Mweelrea">
+        <figcaption><b>Photograph: The Cousin Times</b> — Killary Harbour under Mweelrea, with the mussel lines strung across the water.</figcaption>
+      </figure>
+
+      <div class="jump">📖 Read the full guide on the website: <a href="https://www.myirishcousin.com/blog/leenane-killary-harbour-by-car">Leenane and Killary Harbour by Car: Ireland's Only Fjord</a></div>
+
+      <!-- ---------- POSTBAG ---------- -->
+      <section class="letters">
+        <h2>The Postbag</h2>
+        <hr class="section-rule">
+        <p class="sub">No new reviews overnight — the desk is quiet · Sentiment: unbroken, every review on the board still five stars · Excerpts</p>
+        <p class="market-note" style="margin-top:0;">Nothing new landed in the Postbag since yesterday's edition, and we do not reprint the same letters twice — the five that ran on Sunday stand, still all ★★★★★.</p>
+        <p class="market-note">The week's letters kept returning to the same three things, though: the price quoted is the price paid, nobody is sold insurance they did not ask for, and there is a person on the phone when something goes wrong. That is a better advertisement than anything we could write ourselves.</p>
+        <p class="gmb-cta"><a href="https://maps.google.com/maps?cid=15064788590415502625">Read all reviews on our Google page</a></p>
+      </section>
+    </main>
+
+    <!-- ================= RIGHT RAIL ================= -->
+    <aside class="rail">
+      <section>
+        <h2>The Markets</h2>
+        <hr class="section-rule">
+        <p class="sub">My Irish Cousin — Trading Report</p>
+        <table class="market">
+          <caption>Books closed 25 Oct. 2026</caption>
+          <thead>
+            <tr><th>Instrument</th><th>Yesterday</th><th>Oct. to date</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Leads</td><td class="num">86</td><td class="num">1,359</td></tr>
+            <tr><td>Paid bookings</td><td class="num">13</td><td class="num">291</td></tr>
+            <tr><td>Revenue</td><td class="num">€12,102</td><td class="num">€265,782</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="3">Sentiment: strong. Busiest lead day of the month — 86.</td></tr>
+          </tfoot>
+        </table>
+        <p class="market-note">Sunday closed with eighty-six leads — the busiest of the month — and thirteen paid bookings at €12,102. Twenty-five days in, October stands at €265,782 across two hundred and ninety-one paid bookings.</p>
+      </section>
+
+      <section>
+        <h2>The Day Book</h2>
+        <hr class="section-rule">
+        <p class="sub">Celtic Vacations — 24 to 25 Oct.</p>
+        <table class="market">
+          <caption>By the numbers</caption>
+          <tbody>
+            <tr><td>New leads</td><td class="num">0</td><td class="num">—</td></tr>
+            <tr><td>New inquiries</td><td class="num">19</td><td class="num">16 ads · 3 web</td></tr>
+            <tr><td>Proposals sent</td><td class="num">0</td><td class="num">—</td></tr>
+            <tr><td>New confirmations</td><td class="num">0</td><td class="num">—</td></tr>
+            <tr><td>Outstanding</td><td class="num">10</td><td class="num">€7,040 awaiting</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="citydesk">
+        <h2>City Desk</h2>
+        <hr class="section-rule">
+        <p class="sub">Celtic Vacations — Activity</p>
+        <ul>
+          <li><b>A quiet weekend in Ezus:</b> no new leads, no new approvals and no new bookings since the last brief.</li>
+          <li><b>Nineteen new inquiries</b> across the two-day brief (24–25 Oct) — sixteen from paid ads, three through the website; eight of those ran in Saturday's edition, so eleven are new.</li>
+          <li><b>No new confirmations</b> added to the Celtic Confirmed 26/27 board.</li>
+          <li><b>Two trips depart this week</b> — 27 Oct, Tim Leonard; 1 Nov, Meagan Roibal — both balance paid.</li>
+          <li><span class="flag">Warrant for attention:</span> ten items outstanding; two approved proposals — €7,040 combined — unconfirmed past a fortnight.</li>
+        </ul>
+      </section>
+    </aside>
+  </div>
+
+  <div class="colophon">
+    <span>Compiled &amp; typeset by Adrian · Editor-in-Chief: Malachy Quinn</span>
+    <span>Our brands: <b>My Irish Cousin</b> · <b>Celtic Vacations</b></span>
+    <span>© MMXXVI MIC Sales &amp; Marketing Ltd.</span>
+  </div>
+
+</div>
+</body>
+</html>
