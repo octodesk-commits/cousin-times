@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive">
-<title>The Cousin Times — Tuesday, 27 October 2026</title>
+<title>The Cousin Times — Wednesday, 28 October 2026</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 
@@ -207,10 +207,14 @@
     margin-top: 26px;
     border-top: 1px solid #191713;
     padding-top: 8px;
-    display: flex; justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 4px 18px;
+    align-items: start;
     font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase;
     color: #4a453b; line-height: 1.6;
   }
+  .colophon span:last-child { text-align: right; }
 
   @media (max-width: 1180px) {
     .page { width: 100%; }
@@ -237,7 +241,8 @@
     table.market { font-size: 12.5px; }
     .citydesk ul { font-size: 13.5px; }
     .citydesk li { text-align: left; }
-    .colophon { flex-direction: column; gap: 5px; text-align: center; }
+    .colophon { grid-template-columns: minmax(0, 1fr); gap: 5px; text-align: center; }
+    .colophon span:last-child { text-align: center; }
   }
 </style>
 </head>
@@ -245,7 +250,7 @@
 <div class="page">
 
   <div class="topline">
-    <span>Vol. I — No. 33</span>
+    <span>Vol. I — No. 34</span>
     <span>Registered at the G.P.O. as a newspaper</span>
     <span>Price: one cuppa</span>
   </div>
@@ -257,14 +262,14 @@
   <div class="ears">
     <div class="ear">
       <b>The Weather</b>
-      A bright Tuesday — crisp and dry,<br>
+      A bright Wednesday — crisp and dry,<br>
       light winds off the Atlantic.
     </div>
-    <div class="dateline">Dublin, Tuesday, 27 October 2026</div>
+    <div class="dateline">Dublin, Wednesday, 28 October 2026</div>
     <div class="ear">
       <b>Inside Today's Edition</b>
-      Cong &amp; Ashford Castle — Travel Desk lead<br>
-      The Markets — My Irish Cousin, right rail · Postbag — two new reviews
+      Killary Harbour — Travel Desk lead<br>
+      The Markets — My Irish Cousin, right rail · Postbag — one new review
     </div>
   </div>
 
@@ -273,34 +278,30 @@
     <!-- ================= MAIN WELL ================= -->
     <main class="well">
       <p class="kicker">From the Travel Desk — My Irish Cousin</p>
-      <h2 class="headline">Cong and Ashford Castle by Car: The Quiet Man Country</h2>
-      <p class="standfirst">The first thing you meet in Cong is a weathered limestone cross standing in the middle of the street with traffic going round it — said to mark the abbey's completion in the twelfth century. Further along, the abbey sits roofless beside the road, and the river that made the place runs under a low bridge at the bottom of the village. Cong is famous for one thing, a John Ford film shot here in 1951, and it is the least interesting thing about the place: there is also a canal that has never held water, a twenty-metre Victorian folly hidden in woods, and a castle you cannot get inside.</p>
+      <h2 class="headline">Leenane and Killary Harbour by Car: Ireland's Only Fjord</h2>
+      <p class="standfirst">There is a stretch of the N59 just west of Leenane where the road stops being a road and becomes a shelf. On your right the mountain goes up; on your left it goes down, hard, into water the wrong colour for Ireland — black-green, deep, still. No beach, no shallow end: the land simply stops, and sixteen kilometres of drowned valley begins. Killary is the one place in the west where the mountains do not politely step back from the sea — they stand in it. <i>(First published here on Monday; the Travel Desk has had nothing new since.)</i></p>
       <p class="byline">By <b>Shruti</b>, Travel Correspondent</p>
 
       <figure>
-        <img src="https://cdn.sanity.io/images/m1v89hf3/production/0e2d97cd0c1ceacfd1cdacb36e0aae32f8432947-2048x1152.jpg" alt="Main Street in Cong, County Mayo, Ireland, with low stone and rendered houses, the ruined medieval abbey at the end of the street and the river crossing under a low stone bridge">
-        <figcaption><b>Photograph: The Cousin Times</b> — Main Street, Cong, with the roofless abbey at the end of it.</figcaption>
+        <img src="https://cdn.sanity.io/images/m1v89hf3/production/a56d6d5143b9ba265986c69b5b97402359922655-2048x1152.jpg" alt="Killary Harbour in County Galway, Ireland's only fjord, a long dark inlet running between steep mountain walls with lines of black mussel buoys on the still water and low cloud over Mweelrea">
+        <figcaption><b>Photograph: The Cousin Times</b> — Killary Harbour under Mweelrea, with the mussel lines strung across the water.</figcaption>
       </figure>
 
-      <div class="jump">📖 Read the full guide on the website: <a href="https://www.myirishcousin.com/blog/cong-ashford-castle-by-car">Cong and Ashford Castle by Car: The Quiet Man Country</a></div>
+      <div class="jump">📖 Read the full guide on the website: <a href="https://www.myirishcousin.com/blog/leenane-killary-harbour-by-car">Leenane and Killary Harbour by Car: Ireland's Only Fjord</a></div>
 
       <!-- ---------- POSTBAG ---------- -->
       <section class="letters">
         <h2>The Postbag</h2>
         <hr class="section-rule">
-        <p class="sub">Two new reviews overnight — both ★★★★★ · Sentiment: no upsell, everything covered, tolls sorted · Excerpts</p>
-        <div class="letters-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+        <p class="sub">One new review overnight — ★★★★★ · Sentiment: everything handled, trip enjoyed · Excerpts</p>
+        <div class="letters-grid" style="grid-template-columns: minmax(0, 1fr);">
           <div class="letter">
             <div class="stars">★★★★★</div>
-            <p>"Seamless service, no add-on sales pitches, and a very nice car. All communications by email, and everything clear, concise and straightforward."</p>
-            <div class="sig">— Marc Barrett, on Google</div>
-          </div>
-          <div class="letter">
-            <div class="stars">★★★★★</div>
-            <p>"This is THE rental company to choose in Ireland. Everything was covered, and the peace of mind of picking up a car without being upsold was so nice. The toll transponder helped — we went through tolls about six times."</p>
-            <div class="sig">— Chris Ramsay, on Google</div>
+            <p>"My Irish Cousin was everything they claim to be. Everything went perfectly, and knowing it was all in their hands made the trip much more enjoyable."</p>
+            <div class="sig">— David Abts, on Google</div>
           </div>
         </div>
+        <p class="market-note" style="font-size:12px;">A second entry appeared yesterday — a four-star post that is not a review at all but a request to make contact on WhatsApp. It is not reprinted here; Malachy has it flagged for reporting to Google.</p>
         <p class="gmb-cta"><a href="https://maps.google.com/maps?cid=15064788590415502625">Read all reviews on our Google page</a></p>
       </section>
     </main>
@@ -312,34 +313,34 @@
         <hr class="section-rule">
         <p class="sub">My Irish Cousin — Trading Report</p>
         <table class="market">
-          <caption>Books closed 26 Oct. 2026</caption>
+          <caption>Books closed 27 Oct. 2026</caption>
           <thead>
             <tr><th>Instrument</th><th>Yesterday</th><th>Oct. to date</th></tr>
           </thead>
           <tbody>
-            <tr><td>Leads</td><td class="num">88</td><td class="num">1,447</td></tr>
-            <tr><td>Paid bookings</td><td class="num">11</td><td class="num">302</td></tr>
-            <tr><td>Revenue</td><td class="num">€11,529</td><td class="num">€277,311</td></tr>
+            <tr><td>Leads</td><td class="num">63</td><td class="num">1,510</td></tr>
+            <tr><td>Paid bookings</td><td class="num">12</td><td class="num">314</td></tr>
+            <tr><td>Revenue</td><td class="num">€12,371</td><td class="num">€289,682</td></tr>
           </tbody>
           <tfoot>
-            <tr><td colspan="3">Sentiment: strong. 88 leads — October's busiest day yet.</td></tr>
+            <tr><td colspan="3">Sentiment: strong. €289,682 MTD — three hundred thousand in reach.</td></tr>
           </tfoot>
         </table>
-        <p class="market-note">Monday closed with eighty-eight leads, a fresh high for the month, and eleven paid bookings at €11,529. Twenty-six days in, October stands at €277,311 across three hundred and two paid bookings.</p>
+        <p class="market-note">Tuesday closed with sixty-three leads and twelve paid bookings at €12,371. Twenty-seven days in, October stands at €289,682 across three hundred and fourteen paid bookings — €10,318 short of three hundred thousand.</p>
       </section>
 
       <section>
         <h2>The Day Book</h2>
         <hr class="section-rule">
-        <p class="sub">Celtic Vacations — Monday, 26 Oct.</p>
+        <p class="sub">Celtic Vacations — Tuesday, 27 Oct.</p>
         <table class="market">
           <caption>By the numbers</caption>
           <tbody>
             <tr><td>New leads</td><td class="num">0</td><td class="num">—</td></tr>
-            <tr><td>New inquiries</td><td class="num">8</td><td class="num">8 ads · 0 web</td></tr>
+            <tr><td>New inquiries</td><td class="num">10</td><td class="num">10 ads · 0 web</td></tr>
             <tr><td>Proposals sent</td><td class="num">0</td><td class="num">—</td></tr>
             <tr><td>New confirmations</td><td class="num">0</td><td class="num">—</td></tr>
-            <tr><td>Outstanding</td><td class="num">10</td><td class="num">€9,460 awaiting</td></tr>
+            <tr><td>Outstanding</td><td class="num">10</td><td class="num">€7,040 awaiting</td></tr>
           </tbody>
         </table>
       </section>
@@ -349,11 +350,11 @@
         <hr class="section-rule">
         <p class="sub">Celtic Vacations — Activity</p>
         <ul>
-          <li><b>A quiet Monday in Ezus:</b> no new leads, no new approvals and no new bookings since the last brief.</li>
-          <li><b>Eight new inquiries</b> fielded — all from paid ads, none through the website.</li>
+          <li><b>A quiet Tuesday in Ezus:</b> no new leads, no new approvals and no new bookings since the last brief.</li>
+          <li><b>Ten new inquiries</b> fielded — all from paid ads, none through the website.</li>
           <li><b>No new confirmations</b> added to the Celtic Confirmed 26/27 board.</li>
-          <li><b>Two trips depart this week</b> — 27 Oct, Tim Leonard; 1 Nov, Meagan Roibal — both balance paid.</li>
-          <li><span class="flag">Warrant for attention:</span> ten items outstanding; three approved proposals now past a fortnight — €9,460 combined, after Tim Leonard's €2,420 joined the Conroys and Ascenzioni on the list.</li>
+          <li><b>One trip departs this week</b> — 1 Nov, Meagan Roibal, balance paid. Tim Leonard travelled yesterday and has come off the list.</li>
+          <li><span class="flag">Warrant for attention:</span> ten items outstanding; two approved proposals — €7,040 combined — unconfirmed past a fortnight, the Conroys at 48 days and Ascenzioni at 62.</li>
         </ul>
       </section>
     </aside>
