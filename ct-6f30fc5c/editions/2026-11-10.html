@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>The Cousin Times — Tuesday, 10 November 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #e9e4d8;
+    padding: 28px 20px 60px;
+    color: #191713;
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  }
+
+  .page {
+    width: 1120px;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #fbf8f1;
+    border: 1px solid #cfc7b4;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12), 0 18px 50px rgba(0,0,0,.18);
+    padding: 26px 34px 30px;
+  }
+
+  /* ---------- top strip ---------- */
+  .topline {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    color: #4a453b; padding-bottom: 6px;
+  }
+  .rule-double { border-top: 1px solid #191713; border-bottom: 3px double #191713; height: 4px; }
+  .rule-single { border: 0; border-top: 1px solid #191713; margin: 0; }
+
+  /* ---------- masthead ---------- */
+  .masthead {
+    font-family: 'Pirata One', 'Old English Text MT', 'UnifrakturCook', serif;
+    font-weight: 400;
+    font-size: clamp(38px, 11vw, 84px);
+    line-height: 1;
+    text-align: center;
+    margin: 14px 0 4px;
+    letter-spacing: .01em;
+  }
+  .tagline {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: #4a453b;
+    margin-bottom: 12px;
+  }
+  .ears {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 18px;
+    align-items: center;
+    border-top: 1px solid #191713;
+    border-bottom: 1px solid #191713;
+    padding: 7px 2px;
+    margin-top: 4px;
+    font-size: 11.5px;
+    line-height: 1.45;
+  }
+  .ears .ear { color: #37332a; }
+  .ears .ear b { display: block; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: #191713; margin-bottom: 2px; }
+  .ears .dateline { text-align: center; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; }
+  .ears .ear:last-child { text-align: right; }
+
+  /* ---------- layout ---------- */
+  .sheet {
+    display: grid;
+    grid-template-columns: minmax(0, 690px) minmax(0, 1fr);
+    gap: 0;
+    margin-top: 18px;
+  }
+  .well { padding-right: 26px; min-width: 0; }
+  .rail { border-left: 1px solid #b9b09c; padding-left: 26px; min-width: 0; }
+
+  .kicker {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: .26em; text-transform: uppercase;
+    color: #7a2e1d;
+    margin: 0 0 8px;
+  }
+  .headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(27px, 4.5vw, 42px);
+    line-height: 1.08;
+    margin: 0 0 6px;
+    letter-spacing: -.01em;
+  }
+  .standfirst {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.4;
+    color: #37332a;
+    margin: 0 0 12px;
+  }
+  .byline {
+    font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: #4a453b; margin: 0 0 14px;
+  }
+  .byline b { color: #191713; }
+
+  figure { margin: 0 0 14px; }
+  figure img {
+    width: 100%; height: auto; display: block;
+    border: 1px solid #b9b09c;
+    filter: saturate(.92) contrast(1.02);
+  }
+  figcaption {
+    font-size: 11.5px; color: #4a453b; font-style: italic;
+    padding: 6px 2px 0; line-height: 1.4;
+  }
+  figcaption b { font-style: normal; letter-spacing: .1em; text-transform: uppercase; font-size: 10px; }
+
+  .jump {
+    margin-top: 2px;
+    border-top: 1px solid #b9b09c;
+    border-bottom: 1px solid #b9b09c;
+    padding: 8px 2px;
+    font-size: 12.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  .jump a { color: #7a2e1d; text-decoration: none; font-weight: 600; overflow-wrap: anywhere; }
+  .jump a:hover { text-decoration: underline; }
+
+  /* ---------- rail boxes ---------- */
+  .rail section { margin-bottom: 26px; }
+  .rail h2, .letters h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 800;
+    font-size: 21px;
+    margin: 0 0 2px;
+  }
+  .section-rule { border: 0; border-top: 3px double #191713; margin: 0 0 12px; }
+  .rail .sub {
+    font-size: 10.5px; letter-spacing: .2em; text-transform: uppercase;
+    color: #4a453b; margin: 0 0 12px;
+  }
+
+  table.market { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  table.market caption {
+    text-align: left; font-size: 11px; letter-spacing: .16em;
+    text-transform: uppercase; color: #4a453b; padding-bottom: 6px;
+  }
+  table.market th, table.market td { padding: 5px 2px; }
+  table.market thead th {
+    border-top: 1px solid #191713; border-bottom: 1px solid #191713;
+    font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase;
+    text-align: right; font-weight: 600;
+  }
+  table.market thead th:first-child { text-align: left; }
+  table.market td { border-bottom: 1px solid #ddd5c2; }
+  table.market td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  table.market tfoot td {
+    border-bottom: 0; border-top: 1px solid #191713;
+    font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #4a453b;
+    padding-top: 7px;
+  }
+  .market-note { font-size: 12.5px; font-style: italic; color: #37332a; line-height: 1.5; margin: 12px 0 0; }
+
+  .citydesk ul { margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.55; }
+  .citydesk li { margin-bottom: 9px; padding-left: 14px; text-indent: -14px; text-align: justify; }
+  .citydesk li::before { content: "•"; padding-right: 8px; color: #7a2e1d; }
+  .citydesk .flag { color: #7a2e1d; font-weight: 600; }
+
+  /* ---------- postbag (compact) ---------- */
+  .letters { margin-top: 20px; }
+  .letters .sub {
+    font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+    color: #4a453b; margin: 0 0 14px;
+  }
+  .letters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px 26px;
+  }
+  .letter { border-top: 1px solid #191713; padding-top: 8px; }
+  .letter .stars { font-size: 12px; letter-spacing: .3em; color: #7a2e1d; margin-bottom: 5px; }
+  .letter p {
+    font-size: 13px; line-height: 1.45; font-style: italic;
+    color: #37332a; margin: 0 0 6px;
+  }
+  .letter .sig {
+    font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase;
+    color: #4a453b; font-style: normal;
+  }
+  .letters .gmb-cta {
+    margin: 18px 0 0; text-align: center;
+    font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: #4a453b;
+  }
+  .letters .gmb-cta a { color: #7a2e1d; text-decoration: underline; }
+
+  /* ---------- colophon ---------- */
+  .colophon {
+    margin-top: 26px;
+    border-top: 1px solid #191713;
+    padding-top: 8px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 4px 18px;
+    align-items: start;
+    font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase;
+    color: #4a453b; line-height: 1.6;
+  }
+  .colophon span:last-child { text-align: right; }
+
+  @media (max-width: 1180px) {
+    .page { width: 100%; }
+    .sheet { grid-template-columns: minmax(0, 1fr); }
+    .well { padding-right: 0; }
+    .rail { border-left: 0; padding-left: 0; border-top: 3px double #191713; margin-top: 24px; padding-top: 18px; }
+  }
+
+  @media (max-width: 640px) {
+    body { padding: 12px 8px 40px; }
+    .page { padding: 14px 14px 18px; }
+    .topline { flex-wrap: wrap; gap: 2px 12px; font-size: 9.5px; }
+    .masthead { margin: 10px 0 2px; }
+    .tagline { font-size: 10px; letter-spacing: .18em; margin-bottom: 10px; }
+    .ears { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 10px 2px; text-align: center; }
+    .ears .dateline { order: -1; }
+    .ears .ear:last-child { text-align: center; }
+    .ears .ear br { display: none; }
+    .sheet { margin-top: 14px; }
+    .kicker { font-size: 10px; }
+    .standfirst { font-size: 15px; }
+    .byline { margin-bottom: 12px; }
+    .letters-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+    table.market { font-size: 12.5px; }
+    .citydesk ul { font-size: 13.5px; }
+    .citydesk li { text-align: left; }
+    .colophon { grid-template-columns: minmax(0, 1fr); gap: 5px; text-align: center; }
+    .colophon span:last-child { text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="topline">
+    <span>Vol. I — No. 47</span>
+    <span>Registered at the G.P.O. as a newspaper</span>
+    <span>Price: one cuppa</span>
+  </div>
+  <div class="rule-double"></div>
+
+  <h1 class="masthead">The Cousin Times</h1>
+  <div class="tagline">Ireland's Trade &amp; Travel Chronicle · Est. Mornings Ago</div>
+
+  <div class="ears">
+    <div class="ear">
+      <b>The Weather</b>
+      A milder Tuesday — damp and still,<br>
+      cloud sitting low over the city.
+    </div>
+    <div class="dateline">Dublin, Tuesday, 10 November 2026</div>
+    <div class="ear">
+      <b>Inside Today's Edition</b>
+      Christmas in Dublin — Travel Desk lead<br>
+      The Markets — My Irish Cousin, right rail · Postbag — five reviews
+    </div>
+  </div>
+
+  <div class="sheet">
+
+    <!-- ================= MAIN WELL ================= -->
+    <main class="well">
+      <p class="kicker">From the Travel Desk — My Irish Cousin</p>
+      <h2 class="headline">Christmas in Dublin: Lights, Markets and Where to Park</h2>
+      <p class="standfirst">Grafton Street switches on in the middle of November, and for about seven weeks Dublin stops pretending to be a normal working city. Chandeliers go up on wires above the full length of the street, the shops stay open late and the whole centre glows. The part that catches visitors out is the clock — in December, Dublin is dark by five. If you are hiring a car, the first decision is which half of the trip it is for, because the centre is small, congested, and parking is the thing cousins consistently get wrong. This is the honest version: where the lights are, what the markets actually are this season, where to leave the car, and the three things that are not worth the trouble.</p>
+      <p class="byline">By <b>Shruti</b>, Travel Correspondent</p>
+
+      <figure>
+        <img src="https://cdn.sanity.io/images/m1v89hf3/production/d5d8b7d67f38212dd8507f8eb360eb7824d834d9-2048x1152.jpg" alt="A wide Dublin shopping street at dusk in December hung with warm fairy lights and large illuminated chandelier decorations strung between the buildings, wet paving reflecting the glow and Georgian brick shopfronts on both sides">
+        <figcaption><b>Photograph: The Cousin Times</b> — Grafton Street after the switch-on, chandeliers strung the length of the street.</figcaption>
+      </figure>
+
+      <div class="jump">📖 Read the full guide on the website: <a href="https://www.myirishcousin.com/blog/christmas-in-dublin">Christmas in Dublin: Lights, Markets and Where to Park</a></div>
+
+      <!-- ---------- POSTBAG ---------- -->
+      <section class="letters">
+        <h2>The Postbag</h2>
+        <hr class="section-rule">
+        <p class="sub">Five new reviews overnight — all ★★★★★ · Sentiment: the best single night of the autumn; everything-included is the theme, and one note about the Enterprise desk</p>
+        <div class="letters-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch;">
+          <div class="letter" style="display: flex; flex-direction: column;">
+            <div class="stars">★★★★★</div>
+            <p>"Super responsive and accommodating from the first message, and the website was simple to book on. Their tips for international drivers were a big help, especially for those of us not used to driving on the left. The insurance gave us real peace of mind on those narrow country roads."</p>
+            <div class="sig" style="margin-top: auto;">— Seneca Harper, on Google</div>
+          </div>
+          <div class="letter" style="display: flex; flex-direction: column;">
+            <div class="stars">★★★★★</div>
+            <p>Rating only: five stars and no comment left. Printed so the count is honest rather than flattering.</p>
+            <div class="sig" style="margin-top: auto;">— Carole Gary, on Google</div>
+          </div>
+          <div class="letter" style="display: flex; flex-direction: column;">
+            <div class="stars">★★★★★</div>
+            <p>"Looking into renting a car in Ireland was stressful. The big corporations sell add-ons that sound like insurance but disclose that they aren't. When I found My Irish Cousin I was delighted that they include everything — insurance, roadside assistance, additional drivers, and the option to travel to Northern Ireland."</p>
+            <div class="sig" style="margin-top: auto;">— Mel, on Google</div>
+          </div>
+          <div class="letter" style="display: flex; flex-direction: column;">
+            <div class="stars">★★★★★</div>
+            <p>"A great experience, though it goes through Enterprise and you have to take a shuttle to collect the car — I wish that were clearer, as we waited half an hour at the kiosk only to be sent to the shuttle stop. It was far more expensive than other quotes, but everything was included and it was hassle-free."</p>
+            <div class="sig" style="margin-top: auto;">— Chelsea Ryan, on Google</div>
+          </div>
+          <div class="letter" style="display: flex; flex-direction: column; grid-column: 1 / -1;">
+            <div class="stars">★★★★★</div>
+            <p>"Brilliant experience for our five-week rental. Loved that everything was included and that we were covered for absolutely everything — definitely worth the money. Communication was fast and they were super easy to deal with. The car was perfect: ran well, clean and easy to drive. Pick-up and return at Dublin airport was quick, easy and hassle-free."</p>
+            <div class="sig" style="margin-top: auto;">— Fiona Stuart-Doherty, on Google</div>
+          </div>
+        </div>
+        <p class="gmb-cta"><a href="https://maps.google.com/maps?cid=15064788590415502625">Read all reviews on our Google page</a></p>
+      </section>
+    </main>
+
+    <!-- ================= RIGHT RAIL ================= -->
+    <aside class="rail">
+      <section>
+        <h2>The Markets</h2>
+        <hr class="section-rule">
+        <p class="sub">My Irish Cousin — Trading Report</p>
+        <table class="market">
+          <caption>Books closed 9 Nov. 2026</caption>
+          <thead>
+            <tr><th>Instrument</th><th>Yesterday</th><th>Nov. to date</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Leads</td><td class="num">50</td><td class="num">559</td></tr>
+            <tr><td>Paid bookings</td><td class="num">6</td><td class="num">83</td></tr>
+            <tr><td>Revenue</td><td class="num">€6,668</td><td class="num">€94,715</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="3">Sentiment: flat. €94,715 after nine days of November.</td></tr>
+          </tfoot>
+        </table>
+        <p class="market-note">Monday held Sunday's shape: fifty enquiries, six paid bookings, €6,668. Two days running now at six bookings apiece after Saturday's eleven. Nine days into November the month stands at €94,715 across eighty-three paid bookings from five hundred and fifty-nine leads — an average booking of €1,141, still well ahead of October's €927.</p>
+      </section>
+
+      <section>
+        <h2>The Day Book</h2>
+        <hr class="section-rule">
+        <p class="sub">Celtic Vacations — Monday, 9 Nov.</p>
+        <table class="market">
+          <caption>By the numbers</caption>
+          <tbody>
+            <tr><td>New leads</td><td class="num">2</td><td class="num">€9,680</td></tr>
+            <tr><td>New inquiries</td><td class="num">0</td><td class="num">0 ads · 0 web</td></tr>
+            <tr><td>Proposals sent</td><td class="num">2</td><td class="num">both out</td></tr>
+            <tr><td>New confirmations</td><td class="num">0</td><td class="num">—</td></tr>
+            <tr><td>Outstanding</td><td class="num">10</td><td class="num">€7,040 awaiting</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="citydesk">
+        <h2>City Desk</h2>
+        <hr class="section-rule">
+        <p class="sub">Celtic Vacations — Activity</p>
+        <ul>
+          <li><b>Two new leads worth €9,680</b> in Ezus yesterday, both Sadb Molloy's — and both already out as proposals, so nothing is sitting unpitched.</li>
+          <li><b>No inquiries at all</b>, paid or website — the first blank day for either channel since 4 November.</li>
+          <li><b>No new confirmations</b>; the board still holds Dylan James alone, €3,700, travelling Thursday.</li>
+          <li><b>One trip departs this week</b> — that Thursday booking is the only one in the seven-day window.</li>
+          <li><span class="flag">Warrant for attention:</span> ten items outstanding; the two approved proposals, €7,040, now 61 and 75 days unconfirmed — the Conroys and Ascenzioni.</li>
+        </ul>
+      </section>
+    </aside>
+  </div>
+
+  <div class="colophon">
+    <span>Compiled &amp; typeset by Adrian · Editor-in-Chief: Malachy Quinn</span>
+    <span style="white-space: nowrap;">Our brands: <b>My Irish Cousin</b> · <b>Celtic Vacations</b></span>
+    <span>© MMXXVI MIC Sales &amp; Marketing Ltd.</span>
+  </div>
+
+</div>
+</body>
+</html>
