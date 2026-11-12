@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>The Cousin Times — Thursday, 12 November 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #e9e4d8;
+    padding: 28px 20px 60px;
+    color: #191713;
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  }
+
+  .page {
+    width: 1120px;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #fbf8f1;
+    border: 1px solid #cfc7b4;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12), 0 18px 50px rgba(0,0,0,.18);
+    padding: 26px 34px 30px;
+  }
+
+  /* ---------- top strip ---------- */
+  .topline {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    color: #4a453b; padding-bottom: 6px;
+  }
+  .rule-double { border-top: 1px solid #191713; border-bottom: 3px double #191713; height: 4px; }
+  .rule-single { border: 0; border-top: 1px solid #191713; margin: 0; }
+
+  /* ---------- masthead ---------- */
+  .masthead {
+    font-family: 'Pirata One', 'Old English Text MT', 'UnifrakturCook', serif;
+    font-weight: 400;
+    font-size: clamp(38px, 11vw, 84px);
+    line-height: 1;
+    text-align: center;
+    margin: 14px 0 4px;
+    letter-spacing: .01em;
+  }
+  .tagline {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: #4a453b;
+    margin-bottom: 12px;
+  }
+  .ears {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 18px;
+    align-items: center;
+    border-top: 1px solid #191713;
+    border-bottom: 1px solid #191713;
+    padding: 7px 2px;
+    margin-top: 4px;
+    font-size: 11.5px;
+    line-height: 1.45;
+  }
+  .ears .ear { color: #37332a; }
+  .ears .ear b { display: block; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: #191713; margin-bottom: 2px; }
+  .ears .dateline { text-align: center; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; }
+  .ears .ear:last-child { text-align: right; }
+
+  /* ---------- layout ---------- */
+  .sheet {
+    display: grid;
+    grid-template-columns: minmax(0, 690px) minmax(0, 1fr);
+    gap: 0;
+    margin-top: 18px;
+  }
+  .well { padding-right: 26px; min-width: 0; }
+  .rail { border-left: 1px solid #b9b09c; padding-left: 26px; min-width: 0; }
+
+  .kicker {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: .26em; text-transform: uppercase;
+    color: #7a2e1d;
+    margin: 0 0 8px;
+  }
+  .headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(27px, 4.5vw, 42px);
+    line-height: 1.08;
+    margin: 0 0 6px;
+    letter-spacing: -.01em;
+  }
+  .standfirst {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.4;
+    color: #37332a;
+    margin: 0 0 12px;
+  }
+  .byline {
+    font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: #4a453b; margin: 0 0 14px;
+  }
+  .byline b { color: #191713; }
+
+  figure { margin: 0 0 14px; }
+  figure img {
+    width: 100%; height: auto; display: block;
+    border: 1px solid #b9b09c;
+    filter: saturate(.92) contrast(1.02);
+  }
+  figcaption {
+    font-size: 11.5px; color: #4a453b; font-style: italic;
+    padding: 6px 2px 0; line-height: 1.4;
+  }
+  figcaption b { font-style: normal; letter-spacing: .1em; text-transform: uppercase; font-size: 10px; }
+
+  .jump {
+    margin-top: 2px;
+    border-top: 1px solid #b9b09c;
+    border-bottom: 1px solid #b9b09c;
+    padding: 8px 2px;
+    font-size: 12.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  .jump a { color: #7a2e1d; text-decoration: none; font-weight: 600; overflow-wrap: anywhere; }
+  .jump a:hover { text-decoration: underline; }
+
+  /* ---------- rail boxes ---------- */
+  .rail section { margin-bottom: 26px; }
+  .rail h2, .letters h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 800;
+    font-size: 21px;
+    margin: 0 0 2px;
+  }
+  .section-rule { border: 0; border-top: 3px double #191713; margin: 0 0 12px; }
+  .rail .sub {
+    font-size: 10.5px; letter-spacing: .2em; text-transform: uppercase;
+    color: #4a453b; margin: 0 0 12px;
+  }
+
+  table.market { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  table.market caption {
+    text-align: left; font-size: 11px; letter-spacing: .16em;
+    text-transform: uppercase; color: #4a453b; padding-bottom: 6px;
+  }
+  table.market th, table.market td { padding: 5px 2px; }
+  table.market thead th {
+    border-top: 1px solid #191713; border-bottom: 1px solid #191713;
+    font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase;
+    text-align: right; font-weight: 600;
+  }
+  table.market thead th:first-child { text-align: left; }
+  table.market td { border-bottom: 1px solid #ddd5c2; }
+  table.market td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  table.market tfoot td {
+    border-bottom: 0; border-top: 1px solid #191713;
+    font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #4a453b;
+    padding-top: 7px;
+  }
+  .market-note { font-size: 12.5px; font-style: italic; color: #37332a; line-height: 1.5; margin: 12px 0 0; }
+
+  .citydesk ul { margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.55; }
+  .citydesk li { margin-bottom: 9px; padding-left: 14px; text-indent: -14px; text-align: justify; }
+  .citydesk li::before { content: "•"; padding-right: 8px; color: #7a2e1d; }
+  .citydesk .flag { color: #7a2e1d; font-weight: 600; }
+
+  /* ---------- postbag (compact) ---------- */
+  .letters { margin-top: 20px; }
+  .letters .sub {
+    font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+    color: #4a453b; margin: 0 0 14px;
+  }
+  .letters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px 26px;
+  }
+  .letter { border-top: 1px solid #191713; padding-top: 8px; }
+  .letter .stars { font-size: 12px; letter-spacing: .3em; color: #7a2e1d; margin-bottom: 5px; }
+  .letter p {
+    font-size: 13px; line-height: 1.45; font-style: italic;
+    color: #37332a; margin: 0 0 6px;
+  }
+  .letter .sig {
+    font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase;
+    color: #4a453b; font-style: normal;
+  }
+  .letters .gmb-cta {
+    margin: 18px 0 0; text-align: center;
+    font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: #4a453b;
+  }
+  .letters .gmb-cta a { color: #7a2e1d; text-decoration: underline; }
+
+  /* ---------- colophon ---------- */
+  .colophon {
+    margin-top: 26px;
+    border-top: 1px solid #191713;
+    padding-top: 8px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 4px 18px;
+    align-items: start;
+    font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase;
+    color: #4a453b; line-height: 1.6;
+  }
+  .colophon span:last-child { text-align: right; }
+
+  @media (max-width: 1180px) {
+    .page { width: 100%; }
+    .sheet { grid-template-columns: minmax(0, 1fr); }
+    .well { padding-right: 0; }
+    .rail { border-left: 0; padding-left: 0; border-top: 3px double #191713; margin-top: 24px; padding-top: 18px; }
+  }
+
+  @media (max-width: 640px) {
+    body { padding: 12px 8px 40px; }
+    .page { padding: 14px 14px 18px; }
+    .topline { flex-wrap: wrap; gap: 2px 12px; font-size: 9.5px; }
+    .masthead { margin: 10px 0 2px; }
+    .tagline { font-size: 10px; letter-spacing: .18em; margin-bottom: 10px; }
+    .ears { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 10px 2px; text-align: center; }
+    .ears .dateline { order: -1; }
+    .ears .ear:last-child { text-align: center; }
+    .ears .ear br { display: none; }
+    .sheet { margin-top: 14px; }
+    .kicker { font-size: 10px; }
+    .standfirst { font-size: 15px; }
+    .byline { margin-bottom: 12px; }
+    .letters-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+    table.market { font-size: 12.5px; }
+    .citydesk ul { font-size: 13.5px; }
+    .citydesk li { text-align: left; }
+    .colophon { grid-template-columns: minmax(0, 1fr); gap: 5px; text-align: center; }
+    .colophon span:last-child { text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="topline">
+    <span>Vol. I — No. 49</span>
+    <span>Registered at the G.P.O. as a newspaper</span>
+    <span>Price: one cuppa</span>
+  </div>
+  <div class="rule-double"></div>
+
+  <h1 class="masthead">The Cousin Times</h1>
+  <div class="tagline">Ireland's Trade &amp; Travel Chronicle · Est. Mornings Ago</div>
+
+  <div class="ears">
+    <div class="ear">
+      <b>The Weather</b>
+      A cold Thursday — dry and clear,<br>
+      frost on the grass before dawn.
+    </div>
+    <div class="dateline">Dublin, Thursday, 12 November 2026</div>
+    <div class="ear">
+      <b>Inside Today's Edition</b>
+      Killarney at Christmas — Travel Desk lead<br>
+      The Markets — My Irish Cousin, right rail · Postbag — three reviews
+    </div>
+  </div>
+
+  <div class="sheet">
+
+    <!-- ================= MAIN WELL ================= -->
+    <main class="well">
+      <p class="kicker">From the Travel Desk — My Irish Cousin</p>
+      <h2 class="headline">Killarney at Christmas: The Lights, the Markets and the Park</h2>
+      <p class="standfirst">Killarney does not do a Christmas market the way Waterford or Belfast does. It does a Christmas season — six weeks, mid-November to the end of December, laid over a town you can walk across in ten minutes and a national park that begins at the bottom of the main street. Lights go up along the approach roads, toy-soldier bollards stand along the footpaths, and a postbox for Santa appears in the centre. One complication first: a good share of the people searching for Christmas in Killarney want the song, not the town — written in 1950, recorded by Bing Crosby in October 1951. It is lovely, it is on every streaming service, and it is not a travel guide. The practical half matters more: what is on, what it costs, and where the car goes on the four evenings the centre closes to traffic.</p>
+      <p class="byline">By <b>Shruti</b>, Travel Correspondent</p>
+
+      <figure>
+        <img src="https://cdn.sanity.io/images/m1v89hf3/production/317cfc58ca33b43009b0bc9e826eea33cf10d773-2048x1152.jpg" alt="A small Irish market town main street at winter dusk, strings of warm Christmas lights slung between painted two and three storey shopfronts, lit windows, wet pavement reflecting the glow, and a dark low mountain ridge beyond the rooftops under an overcast sky">
+        <figcaption><b>Photograph: The Cousin Times</b> — Killarney's main street under the Christmas lights, the mountains behind the rooftops.</figcaption>
+      </figure>
+
+      <div class="jump">📖 Read the full guide on the website: <a href="https://www.myirishcousin.com/blog/killarney-christmas">Killarney at Christmas: The Lights, the Markets and the Park</a></div>
+
+      <!-- ---------- POSTBAG ---------- -->
+      <section class="letters">
+        <h2>The Postbag</h2>
+        <hr class="section-rule">
+        <p class="sub">Three reviews overnight — all ★★★★★ · Sentiment: twelve days in a Skoda, no upselling, and one entry dated a year to the day</p>
+        <div class="letters-grid">
+          <div class="letter">
+            <div class="stars">★★★★★</div>
+            <p>"Rented a car for twelve days in Ireland. The young woman we met on the first day was friendly and helpful and gave us all the information we would need — I'd already read the contract and paid. The car, a Skoda, was a very good car. I felt well taken care of, highly recommend."</p>
+            <div class="sig">— Connie Taylor, on Google</div>
+          </div>
+          <div class="letter">
+            <div class="stars">★★★★★</div>
+            <p>"My best rental car experience, ever. No upselling, the car that I had reserved, great communication. Exceptional communication."</p>
+            <div class="sig">— joHn Kennedy, on Google</div>
+          </div>
+          <div class="letter">
+            <div class="stars">★★★★★</div>
+            <p>Rating only: five stars, no comment left.</p>
+            <div class="sig">— Sharon Powell, on Google</div>
+          </div>
+        </div>
+        <p class="market-note" style="font-size:12px;">Note on the second card: it carries a date one year old to the day, so it is an older review surfacing in the listing rather than a new one. It is printed because it arrived in the feed overnight; no upselling and the reserved car are the two things it names.</p>
+        <p class="gmb-cta"><a href="https://maps.google.com/maps?cid=15064788590415502625">Read all reviews on our Google page</a></p>
+      </section>
+    </main>
+
+    <!-- ================= RIGHT RAIL ================= -->
+    <aside class="rail">
+      <section>
+        <h2>The Markets</h2>
+        <hr class="section-rule">
+        <p class="sub">My Irish Cousin — Trading Report</p>
+        <table class="market">
+          <caption>Books closed 11 Nov. 2026</caption>
+          <thead>
+            <tr><th>Instrument</th><th>Yesterday</th><th>Nov. to date</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Leads</td><td class="num">79</td><td class="num">702</td></tr>
+            <tr><td>Paid bookings</td><td class="num">18</td><td class="num">113</td></tr>
+            <tr><td>Revenue</td><td class="num">€17,832</td><td class="num">€126,257</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="3">Sentiment: strong. €126,257 after eleven days of November.</td></tr>
+          </tfoot>
+        </table>
+        <p class="market-note">Wednesday was the best day of the month: seventy-nine leads, eighteen paid bookings, €17,832. Eleven days into November the month stands at €126,257 across a hundred and thirteen paid bookings from seven hundred and two leads — an average booking of €1,117, and the month is running at roughly eleven and a half thousand a day.</p>
+      </section>
+
+      <section>
+        <h2>The Day Book</h2>
+        <hr class="section-rule">
+        <p class="sub">Celtic Vacations — Wednesday, 11 Nov.</p>
+        <table class="market">
+          <caption>By the numbers</caption>
+          <tbody>
+            <tr><td>New leads</td><td class="num">3</td><td class="num">€7,600</td></tr>
+            <tr><td>New inquiries</td><td class="num">0</td><td class="num">0 ads · 0 web</td></tr>
+            <tr><td>Proposals sent</td><td class="num">1</td><td class="num">+2 other</td></tr>
+            <tr><td>New confirmations</td><td class="num">0</td><td class="num">—</td></tr>
+            <tr><td>Outstanding</td><td class="num">10</td><td class="num">€7,040 awaiting</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="citydesk">
+        <h2>City Desk</h2>
+        <hr class="section-rule">
+        <p class="sub">Celtic Vacations — Activity</p>
+        <ul>
+          <li><b>Three new leads worth €7,600</b> in Ezus yesterday, all Sadb Molloy's — an average of €2,533 a lead.</li>
+          <li><b>One proposal out</b>, with two of the three leads held at other stages; the pitched one is the priority.</li>
+          <li><b>No inquiries at all</b>, paid or website — the third blank inquiry day this month, after 4 and 9 November.</li>
+          <li><b>Dylan James travels today</b> — €3,700, balance paid, due to depart 12 November. Still the only trip in the seven-day window.</li>
+          <li><span class="flag">Warrant for attention:</span> ten items outstanding; the two approved proposals, €7,040, now 63 and 77 days unconfirmed — the Conroys and Ascenzioni.</li>
+        </ul>
+      </section>
+    </aside>
+  </div>
+
+  <div class="colophon">
+    <span>Compiled &amp; typeset by Adrian · Editor-in-Chief: Malachy Quinn</span>
+    <span style="white-space: nowrap;">Our brands: <b>My Irish Cousin</b> · <b>Celtic Vacations</b></span>
+    <span>© MMXXVI MIC Sales &amp; Marketing Ltd.</span>
+  </div>
+
+</div>
+</body>
+</html>
